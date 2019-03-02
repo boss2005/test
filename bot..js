@@ -34,3 +34,4 @@ client.on("message", message => {
     }      
   }
 });//By medo the boss Royal 
+client.login(process.env.BOT_TOKEN);
