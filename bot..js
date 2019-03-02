@@ -1,4 +1,12 @@
-var prefix = "#";
+const Discord = require("discord.js");
+const client = new Discord.Client();
+const prefix = "#";
+
+client.on('ready', () => {
+  console.log(`Logged in as : ${client.user.tag}!`);
+   client.user.setActivity("#buysell",{type: 'PLAYING'})
+   client.user.setStatus("dnd")
+});
 
 client.on("message", message => {
   let args = message.content.split(" ").slice(1).join(" ")
